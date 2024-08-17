@@ -57,9 +57,10 @@ class Typer:
 
     def listener(self):
         while True:
-            keyboard.wait('shift+f')
-            self.emulate_entering_password()
+            keyboard.wait('alt+1')
             time.sleep(0.5)
+            self.emulate_entering_password()
+            
 
         
 if __name__ == '__main__':        
@@ -69,6 +70,6 @@ if __name__ == '__main__':
         
     #starting script    
     typer = Typer(rust.passwords, 0)
-    print('print shift+f to write one password')
+    print('print alt+1 to write one password')
     typer.listener()
 
